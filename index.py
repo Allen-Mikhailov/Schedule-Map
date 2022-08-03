@@ -8,6 +8,11 @@ import json
 scheduleDataPath = "./schedules.json"
 csvFilePath = "./data.csv"
 
+# Checking for data
+if not exists(scheduleDataPath):
+    print("Path \""+scheduleDataPath+"\" does not exist")
+    quit()
+
 # Getting schedule data
 f = open(scheduleDataPath)
 schedules = json.load(f)
